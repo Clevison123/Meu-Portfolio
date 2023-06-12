@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortFolio</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-
-    <div class="background default-theme">
+  
+    <section id="home">
         <header>
-            <div class="logo"> 
-                <i class="fa-duotone fa-planet-ringed"></i>
+            <div class="logo">
+                <h2><span>My</span> Portfolio</h2>
             </div>
-
-            <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Projetos-Próprios</a></li>
-                <li><a href="#">Meus-Trabalhos</a></li>
-                <li><a href="#">Contato</a></li>
-                <button class="toggle-button">Trocar Tema</button>
-            </ul>
+          <div class="nav-container">
+            <li><a href="#home">Home</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#projetos-proprios">Projetos Próprios</a></li>
+              <li><a href="#meus-trabalhos">Meus Trabalhos</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </div>
         </header>
-
+        
         <div class="container-text">
-            <div class="text">
-                <h3>Olá, Pessoal</h3>
-                <h1>Eu sou <span>José Clévison</span></h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Soluta magnam ratione saepe pariatur omnis hic eligendi iure!</p>
-                <div class="redes-sociais">
-                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #183568;"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram" style="color: #db145a;"></i></a>
-                    <a href="#"><i class="fa-brands fa-github" style="color: #030a17;"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp" style="color: #29b332;"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook" style="color: #113e8d;"></i></a>
-                </div>
-                <button class="btn2">Sobre Mim</button>
+          <div class="text">
+            <h3>Olá, Pessoal</h3>
+            <h1>Eu sou <span>José Clévison</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Totam in rem veritatis quo culpa aperiam quos molestias enim quia!</p>
+            <div class="redes-sociais">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+
+              <a href="#" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
+            <button class="btn2">Saiba mais</button>
+          </div>
         </div>
+      </section>
+      
+
+  <section id="projetos" class="portfolio">
+    <h2 class="portfolio-title">Nosso <span>Portfolio</span></h2>
+    <div class="portfolio-content" id="content">
+      <!-- Seus itens do portfólio aqui -->
     </div>
-    
-    <script src="app.js"></script>
+    <div id="button-wrapper">
+      <button id="prev" class="custom-button">Anterior</button>
+      <button id="next" class="custom-button">Próximo</button>
+    </div>
+  </section>
+
+  <section id="projetos-proprios">
+    <!-- Seção de Projetos Próprios -->
+  </section>
+
+  <section id="meus-trabalhos">
+    <!-- Seção de Meus Trabalhos -->
+  </section>
+
+  <section id="contato">
+    <!-- Seção de Contato -->
+  </section>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
