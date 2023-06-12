@@ -8,55 +8,44 @@ window.addEventListener('scroll', function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
 
+  portfolioItems.forEach(function(item) {
+    const imageWrapper = item.querySelectorAll(".image-wrapper");
+    const prevButton = item.querySelector(".prev");
+    const nextButton = item.querySelector(".next");
+    let currentImageIndex = 0;
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const body = document.querySelector('body');
-    const toggleButton = document.querySelector('.toggle-button');
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav a');
-  
-    // Função para alternar entre os temas
-    function toggleTheme() {
-      // Remove as classes de tema existentes
-      body.classList.remove('default-theme', 'dark-theme', 'light-theme');
-  
-      // Adiciona a classe do tema selecionado
-      if (body.classList.contains('default-theme')) {
-        body.classList.remove('default-theme');
-        body.classList.add('light-theme');
-      } else if (body.classList.contains('dark-theme')) {
-        body.classList.remove('dark-theme');
-        body.classList.add('default-theme');
-      } else {
-        body.classList.remove('light-theme');
-        body.classList.add('dark-theme');
-      }
+    function showImage(index) {
+      imageWrapper.forEach(function(wrapper, i) {
+        if (i === index) {
+          wrapper.style.display = "block";
+        } else {
+          wrapper.style.display = "none";
+        }
+      });
     }
-  
-    // Adiciona um listener de evento ao botão de tema
-    toggleButton.addEventListener('click', toggleTheme);
-  
-    // Função para rolar até a seção correspondente
-    function scrollToSection(e) {
-      e.preventDefault();
-      const targetId = e.target.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-  
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
-        });
+
+    function prevImage() {
+      currentImageIndex--;
+      if (currentImageIndex < 0) {
+        currentImageIndex = imageWrapper.length - 1;
       }
+      showImage(currentImageIndex);
     }
-  
-    // Adiciona um listener de evento para cada link do menu
-    navLinks.forEach(function(link) {
-      link.addEventListener('click', scrollToSection);
-    });
+
+    function nextImage() {
+      currentImageIndex++;
+      if (currentImageIndex >= imageWrapper.length) {
+        currentImageIndex = 0;
+      }
+      showImage(currentImageIndex);
+    }
+
+    prevButton.addEventListener("click", prevImage);
+    nextButton.addEventListener("click", nextImage);
+
+    showImage(currentImageIndex);
   });
-  
+});
