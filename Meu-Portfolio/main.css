@@ -135,7 +135,6 @@ button:hover {
 }
 
 /* Portfolio section */
-/* Seletor para centralizar o conteúdo da seção .portfolio */
 .portfolio {
   text-align: center;
   background-color: #000000db;
@@ -165,7 +164,7 @@ button:hover {
 .portfolio .portfolio-item h2 {
   margin-top: 0;
   font-family: 'Arial', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 1px;
   padding-bottom: 15px;
 }
@@ -211,41 +210,8 @@ button:hover {
   transition: 0.5s;
 }
 
-.portfolio .button-wrapper {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
 
-.portfolio .custom-button {
-  padding: 5px;
-  margin: 2px;
-  background-color: transparent;
-  color: #4CAF50;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 90px;
-}
 
-.portfolio .custom-button:hover {
-  background-color: transparent;
-}
-
-.portfolio .custom-button:focus {
-  outline: none;
-}
-
-.portfolio .prev::before,
-.portfolio .next::before {
-  content: '\2039';
-  font-size: 90px;
-  margin: 0;
-}
-
-.portfolio .next::before {
-  content: '\203A';
-}
 
 /* Seletor para centralizar o conteúdo da seção .projetos-pessoais */
 #projetos-pessoais {
