@@ -249,117 +249,139 @@ header {
 
 
 
-/*projetos-pessoais */#projetos-pessoais {
-  text-align: center;
-  background-color: #000000ce;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/*projetos-pessoais */
+#projetos-pessoais {
+  /* Define a seção de projetos pessoais */
+  text-align: center; /* Centraliza o texto */
+  background-color: #000000ce; /* Define a cor de fundo */
+  display: flex; /* Usa layout flexbox */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  padding: 5rem 4rem;
 }
 
 #projetos-pessoais h1 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 30px;
+  /* Estiliza o título dentro da seção */
+  margin-top: 1rem; /* Define uma margem superior de 2rem */
+  margin-bottom: 2rem; /* Define uma margem inferior de 1rem */
+  color: #fff; /* Define a cor do texto como branco */
+  font-size: 30px; /* Define o tamanho da fonte como 30 pixels */
+}
+
+#projetos-pessoais span{
+  color: #2ecc71;
 }
 
 #projetos-pessoais .portfolio-pessoal {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 5rem;
+  /* Define o container para as divs de portfólio pessoal */
+  width: 100%; /* Define a largura como 100% */
+  overflow: hidden; /* Esconde o conteúdo que transborda */
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Define um espaçamento de 20 pixels entre as divs */
+  padding: 0 5rem; /* Define um preenchimento de 0 no topo e na base e 5rem nas laterais */
 }
 
 #projetos-pessoais .meu-portfolio {
-  width: calc((300px + 20px) * 4); /* Largura das 4 divs + espaçamento */
-  display: flex;
-  justify-content: center;
+  /* Define o container para as divs individuais de portfólio */
+  width: calc((350px + 25px) * 4); /* Calcula a largura total das 4 divs com espaçamento */
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
   margin: 0 auto; /* Centraliza as divs com margens laterais */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao transformar as divs */
 }
 
 #projetos-pessoais .img-pessoal {
-  text-align: center;
-  width: 300px;
-  height: 300px;
-  border: 5px solid #2ecc71;
-  padding: 10px;
-  box-sizing: border-box;
+  /* Estiliza as divs individuais de imagem pessoal */
+  text-align: center; /* Centraliza o conteúdo */
+  width: 350px; /* Define a largura como 350 pixels */
+  height: 350px; /* Define a altura como 350 pixels */
+  border: 5px solid #2ecc71; /* Adiciona uma borda sólida de 5 pixels na cor verde */
+  padding: 0px; /* Define um preenchimento interno de 0 pixels */
+  box-sizing: border-box; /* Inclui a borda no cálculo do tamanho total */
+  margin-right: 20px; /* Define uma margem direita de 20 pixels */
 }
+
+#projetos-pessoais .img-pessoal:last-child {
+  margin-right: 0; /* Remove a margem direita da última div */
+}
+
+
 
 #projetos-pessoais .img-pessoal img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* Estiliza as imagens dentro das divs de imagem pessoal */
+  width: 100%; /* Define a largura como 100% do container */
+  height: 80%; /* Define a altura como 100% do container */
+  object-fit: cover; /* Ajusta a imagem para preencher o container mantendo a proporção */
 }
 
-#projetos-pessoais .portfolio-pessoal .img-pessoal p a {
-  color: #2ecc71;
-  background: transparent;
-  border: 1px solid #2ecc71;
-  padding: 7px 7px;
-  margin: 7px;
-  border-radius: 15px;
-  font-size: 16px;
-  width: 150px;
-  cursor: pointer;
+#projetos-pessoais .img-pessoal p a {
+  /* Estiliza os links abaixo das imagens */
+  color: #2ecc71; /* Define a cor do texto como verde */
+  background: transparent; /* Define o plano de fundo como transparente */
+  border: 1px solid #2ecc71; /* Adiciona uma borda sólida de 1 pixel na cor verde */
+  padding: 7px 7px; /* Define um preenchimento interno de 7 pixels na vertical e na horizontal */
+  margin: 7px; /* Define uma margem de 7 pixels em todas as direções */
+  border-radius: 15px; /* Adiciona um arredondamento de borda de 15 pixels */
+  font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+  width: 150px; /* Define a largura como 150 pixels */
+  cursor: pointer; /* Altera o cursor para o estilo de ponteiro */
 }
 
-#projetos-pessoais .portfolio-pessoal .img-pessoal p a:hover {
-  background-color: #2ecc71;
-  color: #fff;
-  transition: 0.5s;
+#projetos-pessoais .img-pessoal p a:hover {
+  /* Estiliza os links abaixo das imagens quando hover */
+  background-color: #2ecc71; /* Define a cor de fundo como verde */
+  color: #fff; /* Define a cor do texto como branco */
+  transition: 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
 }
+
 
 #projetos-pessoais .btns {
-  display: flex;
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  margin-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  gap: 10px; /* Espaçamento entre os botões */
+  /* Estiliza o container para os botões */
+  display: flex; /* Usa layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 10px; /* Define uma margem superior de 10 pixels */
+  padding-bottom: 10px; /* Define um preenchimento inferior de 10 pixels */
+  width: 100%; /* Define a largura como 100% */
+  gap: 10px; /* Define um espaçamento de 10 pixels entre os botões */
 }
 
-
 #projetos-pessoais .custom-btn {
-  padding: 5px;
-  margin: 2px;
-  background-color: transparent;
-  color: #4CAF50;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-  margin-top: 5px;
+  /* Estiliza os botões personalizados */
+  padding: 5px; /* Define um preenchimento interno de 5 pixels */
+  margin: 2px; /* Define uma margem de 2 pixels em todas as direções */
+  background-color: transparent; /* Define o plano de fundo como transparente */
+  color: #4CAF50; /* Define a cor do texto como verde */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Altera o cursor para o estilo de ponteiro */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave à cor de fundo */
+  font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+  margin-top: 5px; /* Define uma margem superior de 5 pixels */
 }
 
 #projetos-pessoais .custom-btn:hover {
-  background-color: transparent;
+  /* Estiliza os botões personalizados quando hover */
+  background-color: transparent; /* Mantém o plano de fundo como transparente */
 }
 
 #projetos-pessoais .custom-btn:focus {
-  outline: none;
+  /* Estiliza os botões personalizados quando focados */
+  outline: none; /* Remove o contorno ao focar */
 }
 
 #projetos-pessoais .prev::before,
 #projetos-pessoais .next::before {
-  content: '\2039';
-  font-size: 70px;
-  margin-right: 10px;
+  /* Estiliza os pseudo-elementos ::before dos botões de navegação */
+  content: '\2039'; /* Adiciona a seta para a esquerda */
+  font-size: 70px; /* Define o tamanho da fonte como 70 pixels */
+  margin-right: 10px; /* Define uma margem à direita de 10 pixels */
 }
 
 #projetos-pessoais .next::before {
-  content: '\203A';
+  /* Estiliza o pseudo-elemento ::before do botão de próxima */
+  content: '\203A'; /* Adiciona a seta para a direita */
 }
-
-#projetos-pessoais .img-pessoal p a {
-  margin-top: 10px;
-}
-
 
 
 /* Sections */
