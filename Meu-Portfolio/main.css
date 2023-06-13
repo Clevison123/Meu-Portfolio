@@ -249,8 +249,7 @@ header {
 
 
 
-/* Seletor para centralizar o conteúdo da seção .projetos-pessoais */
-#projetos-pessoais {
+/*projetos-pessoais */#projetos-pessoais {
   text-align: center;
   background-color: #000000ce;
   display: flex;
@@ -268,24 +267,19 @@ header {
 
 #projetos-pessoais .portfolio-pessoal {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 20px;
   padding: 0 5rem;
 }
 
 #projetos-pessoais .meu-portfolio {
-  width: calc(300px * 4);
+  width: calc((300px + 20px) * 4); /* Largura das 4 divs + espaçamento */
   display: flex;
   justify-content: center;
-  gap: 20px;
+  margin: 0 auto; /* Centraliza as divs com margens laterais */
   transition: transform 0.3s ease;
-}
-
-#projetos-pessoais.hidden .meu-portfolio {
-  transform: translateX(-100%);
 }
 
 #projetos-pessoais .img-pessoal {
@@ -321,15 +315,17 @@ header {
   transition: 0.5s;
 }
 
-#projetos-pessoais .btn-wrapper {
+#projetos-pessoais .btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza os botões horizontalmente */
   margin-top: 10px;
   padding-bottom: 10px;
   width: 100%;
+  gap: 10px; /* Espaçamento entre os botões */
 }
 
-#projetos-pessoais .custom-button {
+
+#projetos-pessoais .custom-btn {
   padding: 5px;
   margin: 2px;
   background-color: transparent;
@@ -341,11 +337,11 @@ header {
   margin-top: 5px;
 }
 
-#projetos-pessoais .custom-button:hover {
+#projetos-pessoais .custom-btn:hover {
   background-color: transparent;
 }
 
-#projetos-pessoais .custom-button:focus {
+#projetos-pessoais .custom-btn:focus {
   outline: none;
 }
 

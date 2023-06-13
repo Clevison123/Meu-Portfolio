@@ -51,57 +51,68 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //meu portfolio projects pessoais
+// Seleciona os elementos relevantes
+const portfolioSection = document.getElementById("projetos-pessoais");
+const portfolioContainer = portfolioSection.querySelector(".meu-portfolio");
+const prevButton = portfolioSection.querySelector(".prev");
+const nextButton = portfolioSection.querySelector(".next");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const portfolio = document.querySelector('.meu-portfolio');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const images = Array.from(portfolio.querySelectorAll('.img-pessoal'));
+// Define a quantidade de imagens visíveis
+const visibleImages = 4;
 
-  const visibleImages = 4;
-  const hiddenImages = images.length - visibleImages;
-  let currentOffset = 0;
+// Define o valor inicial do índice
+let currentIndex = 0;
 
-  function updateButtonVisibility() {
-    prevButton.style.display = currentOffset === 0 ? 'none' : 'block';
-    nextButton.style.display = currentOffset >= hiddenImages ? 'none' : 'block';
+// Obtém a quantidade total de imagens
+const totalImages = portfolioContainer.children.length;
+
+// Define a largura do container para exibir apenas as imagens visíveis
+portfolioContainer.style.width = `${300 * totalImages}px`;
+
+// Função para atualizar a exibição das imagens
+function updatePortfolio() {
+  // Calcula o deslocamento horizontal do container
+  const offset = currentIndex * -300;
+  portfolioContainer.style.transform = `translateX(${offset}px)`;
+}
+
+// Função para verificar se há imagens ocultas à esquerda
+function hasHiddenImagesLeft() {
+  return currentIndex > 0;
+}
+
+// Função para verificar se há imagens ocultas à direita
+function hasHiddenImagesRight() {
+  return currentIndex < totalImages - visibleImages;
+}
+
+// Função para atualizar a visibilidade dos botões
+function updateButtons() {
+  prevButton.disabled = !hasHiddenImagesLeft();
+  nextButton.disabled = !hasHiddenImagesRight();
+}
+
+// Função para mover para a imagem anterior
+function moveToPrevious() {
+  if (hasHiddenImagesLeft()) {
+    currentIndex--;
+    updatePortfolio();
+    updateButtons();
   }
+}
 
-  function updatePortfolioOffset() {
-    portfolio.style.transform = `translateX(-${currentOffset * 320}px)`;
+// Função para mover para a próxima imagem
+function moveToNext() {
+  if (hasHiddenImagesRight()) {
+    currentIndex++;
+    updatePortfolio();
+    updateButtons();
   }
+}
 
-  function showVisibleImages() {
-    images.forEach(function(image, index) {
-      if (index >= currentOffset && index < currentOffset + visibleImages) {
-        image.style.display = 'block';
-      } else {
-        image.style.display = 'none';
-      }
-    });
-  }
+// Adiciona os eventos de clique aos botões
+prevButton.addEventListener("click", moveToPrevious);
+nextButton.addEventListener("click", moveToNext);
 
-  function handlePrevButtonClick() {
-    if (currentOffset > 0) {
-      currentOffset--;
-      updatePortfolioOffset();
-      updateButtonVisibility();
-      showVisibleImages();
-    }
-  }
-
-  function handleNextButtonClick() {
-    if (currentOffset < hiddenImages) {
-      currentOffset++;
-      updatePortfolioOffset();
-      updateButtonVisibility();
-      showVisibleImages();
-    }
-  }
-
-  prevButton.addEventListener('click', handlePrevButtonClick);
-  nextButton.addEventListener('click', handleNextButtonClick);
-
-  showVisibleImages();
-  updateButtonVisibility();
-});
+// Atualiza a visibilidade inicial dos botões
+updateButtons();
