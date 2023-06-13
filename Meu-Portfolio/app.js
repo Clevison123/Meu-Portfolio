@@ -51,68 +51,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //meu portfolio projects pessoais
-// Seleciona os elementos relevantes
-const portfolioSection = document.getElementById("projetos-pessoais");
-const portfolioContainer = portfolioSection.querySelector(".meu-portfolio");
-const prevButton = portfolioSection.querySelector(".prev");
-const nextButton = portfolioSection.querySelector(".next");
 
-// Define a quantidade de imagens visíveis
-const visibleImages = 4;
+// Selecionar os elementos relevantes
+const portfolio = document.querySelector('.meu-portfolio');
+const prevButton = document.querySelector('.prev2');
+const nextButton = document.querySelector('.next2');
 
-// Define o valor inicial do índice
-let currentIndex = 0;
+// Definir o deslocamento inicial do portfolio
+let portfolioOffset = 0;
 
-// Obtém a quantidade total de imagens
-const totalImages = portfolioContainer.children.length;
-
-// Define a largura do container para exibir apenas as imagens visíveis
-portfolioContainer.style.width = `${300 * totalImages}px`;
-
-// Função para atualizar a exibição das imagens
-function updatePortfolio() {
-  // Calcula o deslocamento horizontal do container
-  const offset = currentIndex * -300;
-  portfolioContainer.style.transform = `translateX(${offset}px)`;
-}
-
-// Função para verificar se há imagens ocultas à esquerda
-function hasHiddenImagesLeft() {
-  return currentIndex > 0;
-}
-
-// Função para verificar se há imagens ocultas à direita
-function hasHiddenImagesRight() {
-  return currentIndex < totalImages - visibleImages;
-}
-
-// Função para atualizar a visibilidade dos botões
-function updateButtons() {
-  prevButton.disabled = !hasHiddenImagesLeft();
-  nextButton.disabled = !hasHiddenImagesRight();
-}
-
-// Função para mover para a imagem anterior
-function moveToPrevious() {
-  if (hasHiddenImagesLeft()) {
-    currentIndex--;
-    updatePortfolio();
-    updateButtons();
+// Função para rolar para a esquerda
+const scrollLeft = () => {
+  if (portfolioOffset > 0) {
+    portfolioOffset -= 370; // Ajuste de acordo com a largura do elemento .img-pessoal
+    portfolio.style.transform = `translateX(${portfolioOffset}px)`;
   }
-}
+};
 
-// Função para mover para a próxima imagem
-function moveToNext() {
-  if (hasHiddenImagesRight()) {
-    currentIndex++;
-    updatePortfolio();
-    updateButtons();
+// Função para rolar para a direita
+const scrollRight = () => {
+  const containerWidth = portfolio.offsetWidth;
+  const portfolioWidth = portfolio.scrollWidth;
+  if (portfolioOffset < portfolioWidth - containerWidth) {
+    portfolioOffset += 370; // Ajuste de acordo com a largura do elemento .img-pessoal
+    portfolio.style.transform = `translateX(-${portfolioOffset}px)`;
   }
-}
+};
 
-// Adiciona os eventos de clique aos botões
-prevButton.addEventListener("click", moveToPrevious);
-nextButton.addEventListener("click", moveToNext);
-
-// Atualiza a visibilidade inicial dos botões
-updateButtons();
+// Adicionar os ouvintes de eventos aos botões
+prevButton.addEventListener('click', scrollLeft);
+nextButton.addEventListener('click', scrollRight);
