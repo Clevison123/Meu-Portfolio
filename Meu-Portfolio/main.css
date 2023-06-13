@@ -258,7 +258,7 @@ header {
   flex-direction: column; /* Alinha os elementos verticalmente */
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
-  padding: 5rem 4rem;
+  padding: 5rem 0;
 }
 
 #projetos-pessoais h1 {
@@ -314,6 +314,10 @@ header {
   width: 100%; /* Define a largura como 100% do container */
   height: 80%; /* Define a altura como 100% do container */
   object-fit: cover; /* Ajusta a imagem para preencher o container mantendo a proporção */
+}
+
+#projetos-pessoais .img-pessoal p {
+  padding: 15px;
 }
 
 #projetos-pessoais .img-pessoal p a {
