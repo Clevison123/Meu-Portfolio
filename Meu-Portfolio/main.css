@@ -114,6 +114,7 @@ button:hover {
   font-size: 15px;
   font-weight: 300;
   margin-top: 20px;
+  
 }
 
 .redes-sociais a {
@@ -133,7 +134,23 @@ button:hover {
 
 /* Portfolio section */
 
-.portfolio {
+.portfolio{
+  text-align: center;
+  background-color: #000000db;
+  color: #fff;
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+h1{
+  padding-top: 2rem;
+}
+
+
+h1 > span {
+  color: #2ecc71;
+}
+
+.portfolio-projetos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -141,7 +158,6 @@ button:hover {
   height: 100vh;
   padding: 5rem; /* Espaçamento interno */
   margin: 0 auto; /* Espaçamento externo */
-  background-color: #857c7c; /* Cor de fundo opcional */
 }
 
 .portfolio-item {
@@ -162,8 +178,27 @@ h2 {
 }
 
 .image-wrapper img {
+  padding: 10px;
   max-width: 100%;
   max-height: 100%;
+}
+
+p > a {
+  color: #2ecc71;
+  background: transparent;
+  border: 1px solid #2ecc71;
+  padding: 5px  7px ;
+  margin: 7px;
+  border-radius: 15px;
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+}
+
+p > a:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  transition: 0.5s;
 }
 
 .button-wrapper {
