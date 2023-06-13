@@ -135,6 +135,7 @@ button:hover {
 }
 
 /* Portfolio section */
+/* Seletor para centralizar o conteúdo da seção .portfolio */
 .portfolio {
   text-align: center;
   background-color: #000000db;
@@ -142,36 +143,26 @@ button:hover {
   padding: 2.5rem 2rem 1rem 2rem;
 }
 
-h1 {
+.portfolio h1 {
   padding-top: 2rem;
-  margin-bottom: -5px; /* Ajusta a margem inferior */
+  margin-bottom: -5px;
   font-size: 30px;
 }
 
-
-h1 > span {
-  color: #2ecc71;
-}
-
-.portfolio-projetos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.portfolio .portfolio-projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  width: 100%;
-  height: 100vh;
-  padding: 5rem; /* Espaçamento interno */
-  margin: 0 auto; /* Espaçamento externo */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  padding: 5rem;
 }
 
-
-.portfolio-item {
+.portfolio .portfolio-item {
   text-align: center;
-  width: 100%; /* Tamanho padrão das divs */
+  width: calc(25% - 20px);
 }
 
-h2 {
+.portfolio .portfolio-item h2 {
   margin-top: 0;
   font-family: 'Arial', sans-serif;
   font-size: 24px;
@@ -179,31 +170,30 @@ h2 {
   padding-bottom: 15px;
 }
 
-h2 span {
-  color: #2ecc71; /* Define a cor do texto dentro do span */
-  font-weight: bold; /* Define a fonte em negrito para o texto dentro do span */
+.portfolio .portfolio-item h2 span {
+  color: #2ecc71;
+  font-weight: bold;
 }
 
-
-.image-wrapper {
+.portfolio .portfolio-item .image-wrapper {
   margin-bottom: 10px;
-  display: flex; /* Centralizar as imagens horizontalmente */
-  justify-content: center; /* Centralizar as imagens horizontalmente */
-  align-items: center; /* Centralizar as imagens verticalmente */
-  height: 350px; /* Altura das divs */
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-wrapper img { 
+.portfolio .portfolio-item .image-wrapper img {
   max-width: 100%;
   max-height: 100%;
-  border: 5px solid #2ecc71; /* Adiciona uma borda às imagens */
+  border: 5px solid #2ecc71;
 }
 
-.image-wrapper p {
-  padding-top: 10px; /* Adiciona 10 pixels de espaço acima do link */
+.portfolio .portfolio-item .image-wrapper p {
+  padding-top: 10px;
 }
 
-p > a {
+.portfolio .portfolio-item .image-wrapper p a {
   color: #2ecc71;
   background: transparent;
   border: 1px solid #2ecc71;
@@ -215,19 +205,19 @@ p > a {
   cursor: pointer;
 }
 
-p > a:hover {
+.portfolio .portfolio-item .image-wrapper p a:hover {
   background-color: #2ecc71;
   color: #fff;
   transition: 0.5s;
 }
 
-.button-wrapper {
+.portfolio .button-wrapper {
   margin-top: 40px;
-  display: flex; /* Exibe os botões em linha */
-  justify-content: center; /* Centraliza horizontalmente os botões */
+  display: flex;
+  justify-content: center;
 }
 
-.custom-button {
+.portfolio .custom-button {
   padding: 5px;
   margin: 2px;
   background-color: transparent;
@@ -235,26 +225,141 @@ p > a:hover {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 90px; /* Aumenta o tamanho das setas */
+  font-size: 90px;
 }
 
-.custom-button:hover {
+.portfolio .custom-button:hover {
   background-color: transparent;
 }
 
-.custom-button:focus {
+.portfolio .custom-button:focus {
   outline: none;
 }
 
-.prev::before,
-.next::before {
+.portfolio .prev::before,
+.portfolio .next::before {
   content: '\2039';
-  font-size: 90px; /* Aumenta o tamanho das setas */
+  font-size: 90px;
   margin: 0;
 }
 
-.next::before {
+.portfolio .next::before {
   content: '\203A';
+}
+
+/* Seletor para centralizar o conteúdo da seção .projetos-pessoais */
+#projetos-pessoais {
+  text-align: center;
+  background-color: #000000ce;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projetos-pessoais h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 30px;
+}
+
+#projetos-pessoais .portfolio-pessoal {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+#projetos-pessoais .meu-portfolio {
+  width: calc(300px * 4);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+#projetos-pessoais.hidden .meu-portfolio {
+  transform: translateX(-100%);
+}
+
+#projetos-pessoais .img-pessoal {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border: 5px solid #2ecc71;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#projetos-pessoais .img-pessoal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#projetos-pessoais .portfolio-pessoal .img-pessoal p a {
+  color: #2ecc71;
+  background: transparent;
+  border: 1px solid #2ecc71;
+  padding: 7px 7px;
+  margin: 7px;
+  border-radius: 15px;
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer;
+}
+
+#projetos-pessoais .portfolio-pessoal .img-pessoal p a:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#projetos-pessoais .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+#projetos-pessoais .custom-button {
+  padding: 5px;
+  margin: 2px;
+  background-color: transparent;
+  color: #4CAF50;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+#projetos-pessoais .custom-button:hover {
+  background-color: transparent;
+}
+
+#projetos-pessoais .custom-button:focus {
+  outline: none;
+}
+
+#projetos-pessoais .prev::before,
+#projetos-pessoais .next::before {
+  content: '\2039';
+  font-size: 70px;
+  margin-right: 10px;
+}
+
+#projetos-pessoais .next::before {
+  content: '\203A';
+}
+
+#projetos-pessoais .img-pessoal p a {
+  margin-top: 10px;
 }
 
 
