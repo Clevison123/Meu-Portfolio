@@ -1,7 +1,14 @@
 window.addEventListener('scroll', function() {
   var header = document.querySelector('header');
-  header.classList.toggle('sticky', window.scrollY > 0);
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollPosition > 0) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
+
 
 //pop-up
 const btnSaibaMais = document.querySelector('.btn2');
@@ -15,9 +22,6 @@ btnSaibaMais.addEventListener('click', () => {
 fecharBtn.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
-
-
-
 
 
 //meu portfolio projects

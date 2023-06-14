@@ -22,9 +22,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  
-}
 
 /* Estilos da seção home */
 #home {
@@ -43,6 +40,16 @@ header {
   position: fixed;
   width: 100%;
   padding: 3.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+}
+
+header.scrolled {
+  background-color: #1e1e1e;
 }
 
 .nav-container {
@@ -50,6 +57,7 @@ header {
   gap: 3rem;
   font-weight: 400;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .nav-container a {
@@ -71,6 +79,7 @@ header {
   font-size: 35px;
   cursor: pointer;
 }
+
 
 .btn2 {
   color: #2ecc71;
@@ -114,9 +123,15 @@ header {
 
 .text p {
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
   margin-top: 20px;
+
+  max-width: 500px; 
+  font-family: Arial, sans-serif;
+  line-height: 1.5; 
+  text-align: justify;
+  text-indent: 40px;
   
 }
 
@@ -177,8 +192,7 @@ h4{
 }
 
 .popup-content p{
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 10px 0 12px 0;
 }
 
 
@@ -217,6 +231,10 @@ h4{
   padding-top: 2rem;
   margin-bottom: -5px;
   font-size: 30px;
+}
+
+.portfolio span {
+  color: #2ecc71;
 }
 
 .portfolio .portfolio-projetos {
@@ -539,7 +557,7 @@ p {
 /*Footer*/
 
 footer {
-  background-color: var(--bg-color);
+  background-color: #1e1e1e;
   padding: 30px 0;
   text-align: center;
 }
