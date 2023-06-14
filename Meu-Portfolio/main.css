@@ -272,6 +272,11 @@ header {
   color: #2ecc71;
 }
 
+p{
+  color: white;
+  font-size: 25px;
+}
+
 #projetos-pessoais .portfolio-pessoal {
   width: 100%;
   overflow: hidden;
@@ -347,7 +352,6 @@ header {
 }
 
 #projetos-pessoais .custom-btn:hover {
-  background-color: #4CAF50;
   color: white;
 }
 
