@@ -75,3 +75,29 @@ btnPrev.addEventListener("click", () => {
   }
 });
 
+
+// meus trabalhos
+
+const btnPrev3 = document.querySelector(".prev3");
+const btnNext3 = document.querySelector(".next3");
+const portfolio3 = document.querySelector(".tra-portfolio");
+const divs3 = portfolio3.querySelectorAll(".img-tra");
+const divWidth3 = divs3[0].offsetWidth;
+const divsPerView3 = 3;
+const totalDivs3 = divs3.length;
+let currentPosition3 = 0;
+
+btnNext3.addEventListener("click", () => {
+  if (currentPosition3 < totalDivs3 - divsPerView3) {
+    currentPosition3++;
+    portfolio3.style.transform = `translateX(-${currentPosition3 * divWidth3}px)`;
+  }
+});
+
+btnPrev3.addEventListener("click", () => {
+  if (currentPosition3 > 0) {
+    currentPosition3--;
+    portfolio3.style.transform = `translateX(-${currentPosition3 * divWidth3}px)`;
+  }
+});
+
