@@ -3,6 +3,20 @@ window.addEventListener('scroll', function() {
   header.classList.toggle('sticky', window.scrollY > 0);
 });
 
+//pop-up
+const btnSaibaMais = document.querySelector('.btn2');
+const popupContainer = document.querySelector('.popup-container');
+const fecharBtn = document.querySelector('#fechar-btn');
+
+btnSaibaMais.addEventListener('click', () => {
+  popupContainer.style.display = 'flex';
+});
+
+fecharBtn.addEventListener('click', () => {
+  popupContainer.style.display = 'none';
+});
+
+
 
 
 
