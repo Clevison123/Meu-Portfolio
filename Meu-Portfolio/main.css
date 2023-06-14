@@ -144,8 +144,6 @@ header {
   transition: opacity 0.3s ease-in-out;
 }
 
-
-
 .popup-content {
   background-color: #555;
   padding: 20px;
@@ -162,18 +160,27 @@ header {
 }
 
 .popup-content h2 {
-  color: #2ecc71;
+  color: #0db754;
   font-size: 24px;
   margin-bottom: 10px;
   text-align: center; /* Centraliza o texto do h3 */
 }
 
-.popup-content p {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: justify; /* Justifica o texto do parágrafo */
+h4{
+  color: #0db754;
+  padding-top: 7px;
 }
+
+.nome{
+  text-align: center;
+  font-size: 18px;
+}
+
+.popup-content p{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 
 #fechar-btn {
   background-color: #2ecc71;
