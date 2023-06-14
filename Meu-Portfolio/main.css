@@ -277,7 +277,7 @@ header {
   overflow: hidden;
   display: flex;
   gap: 20px;
-  padding: 0 5rem;
+  padding: 0 10%;
   scroll-behavior: smooth;
 }
 
@@ -328,32 +328,28 @@ header {
 #projetos-pessoais .btns {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  padding-bottom: 15px;
   width: 100%;
   gap: 10px;
 }
 
 #projetos-pessoais .custom-btn {
-  padding: 5px;
-  margin: 2px;
+  padding: 20px;
+  margin: 5px;
   background-color: transparent;
   color: #4CAF50;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 16px;
-  margin-top: 5px;
+  font-size: 50px;
+  border-radius: 50%;
 }
 
 #projetos-pessoais .custom-btn:hover {
   background-color: #4CAF50;
   color: white;
 }
-
-
-
-
 
 
 /* Sections */
