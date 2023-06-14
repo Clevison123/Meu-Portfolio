@@ -52,32 +52,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //meu portfolio projects pessoais
 
-// Selecionar os elementos relevantes
-const portfolio = document.querySelector('.meu-portfolio');
-const prevButton = document.querySelector('.prev2');
-const nextButton = document.querySelector('.next2');
+const btnPrev = document.querySelector(".prev2");
+const btnNext = document.querySelector(".next2");
+const portfolio = document.querySelector(".meu-portfolio");
+const divs = portfolio.querySelectorAll(".img-pessoal");
+const divWidth = divs[0].offsetWidth;
+const divsPerView = 3;
+const totalDivs = divs.length;
+let currentPosition = 0;
 
-// Definir o deslocamento inicial do portfolio
-let portfolioOffset = 0;
-
-// Função para rolar para a esquerda
-const scrollLeft = () => {
-  if (portfolioOffset > 0) {
-    portfolioOffset -= 370; // Ajuste de acordo com a largura do elemento .img-pessoal
-    portfolio.style.transform = `translateX(${portfolioOffset}px)`;
+btnNext.addEventListener("click", () => {
+  if (currentPosition < totalDivs - divsPerView) {
+    currentPosition++;
+    portfolio.style.transform = `translateX(-${currentPosition * divWidth}px)`;
   }
-};
+});
 
-// Função para rolar para a direita
-const scrollRight = () => {
-  const containerWidth = portfolio.offsetWidth;
-  const portfolioWidth = portfolio.scrollWidth;
-  if (portfolioOffset < portfolioWidth - containerWidth) {
-    portfolioOffset += 370; // Ajuste de acordo com a largura do elemento .img-pessoal
-    portfolio.style.transform = `translateX(-${portfolioOffset}px)`;
+btnPrev.addEventListener("click", () => {
+  if (currentPosition > 0) {
+    currentPosition--;
+    portfolio.style.transform = `translateX(-${currentPosition * divWidth}px)`;
   }
-};
+});
 
-// Adicionar os ouvintes de eventos aos botões
-prevButton.addEventListener('click', scrollLeft);
-nextButton.addEventListener('click', scrollRight);
