@@ -11,18 +11,7 @@ window.addEventListener('scroll', function() {
 
 
 
-//pop-up
-const btnSaibaMais = document.querySelector('.btn2');
-const popupContainer = document.querySelector('.popup-container');
-const fecharBtn = document.querySelector('#fechar-btn');
 
-btnSaibaMais.addEventListener('click', () => {
-  popupContainer.style.display = 'flex';
-});
-
-fecharBtn.addEventListener('click', () => {
-  popupContainer.style.display = 'none';
-});
 
 
 //meu portfolio projects

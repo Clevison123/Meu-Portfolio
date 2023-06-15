@@ -281,7 +281,6 @@ header.scrolled {
   align-items: center;
   padding: 5rem 0;
   overflow: hidden;
-  scroll-margin-top: 94px;
 }
 
 #projetos-pessoais h1 {
@@ -389,7 +388,6 @@ p{
   align-items: center;
   padding: 5rem 0;
   overflow: hidden;
-  scroll-margin-top: 94px;
 }
 
 #meus-trabalhos h1 {
