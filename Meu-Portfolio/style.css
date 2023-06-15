@@ -2,27 +2,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     background-color: #333333da;
+    padding-top: 70px; /* Adjust this value to match the height of your fixed header */
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
-.voltar{
+.voltar {
     text-align: center;
     margin-left: 8rem;
 }
@@ -69,4 +75,91 @@ header {
 .nav a:hover {
     background-color: #2ecc71;
     border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+#resume {
+    background-color: #f9f9f9;
+    padding: 20px;
+    scroll-margin-top: 120px;
+    margin: 40px auto; /* Ajuste o valor da margem superior aqui */
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.experience-item p {
+    margin-bottom: 5px;
+    color: #777;
+}
+
+#curriculo {
+    background-color: #f9f9f9;
+    padding: 20px;
+    scroll-margin-top: 120px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#curriculo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#curriculo p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#curriculo strong {
+    font-weight: bold;
 }
