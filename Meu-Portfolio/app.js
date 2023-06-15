@@ -10,6 +10,7 @@ window.addEventListener('scroll', function() {
 });
 
 
+
 //pop-up
 const btnSaibaMais = document.querySelector('.btn2');
 const popupContainer = document.querySelector('.popup-container');

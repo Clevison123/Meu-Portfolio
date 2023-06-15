@@ -46,11 +46,13 @@ header {
   background-color: transparent;
   transition: background-color 0.3s ease;
   z-index: 9999;
+
 }
 
 header.scrolled {
   background-color: #1e1e1e;
 }
+
 
 .nav-container {
   display: flex;
@@ -225,6 +227,7 @@ h4{
   background-color: #000000db;
   color: #fff;
   padding: 2.5rem 2rem 1rem 2rem;
+  scroll-margin-top: 94px;
 }
 
 .portfolio h1 {
@@ -351,6 +354,7 @@ h4{
   align-items: center;
   padding: 5rem 0;
   overflow: hidden;
+  scroll-margin-top: 94px;
 }
 
 #projetos-pessoais h1 {
@@ -458,6 +462,7 @@ p{
   align-items: center;
   padding: 5rem 0;
   overflow: hidden;
+  scroll-margin-top: 94px;
 }
 
 #meus-trabalhos h1 {
