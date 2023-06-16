@@ -82,10 +82,15 @@ header {
     background-color: #f9f9f9;
     padding: 20px;
     scroll-margin-top: 120px;
-    margin: 40px auto; /* Ajuste o valor da margem superior aqui */
-    max-width: 800px;
+    margin: 40px auto;
+    max-width: 900px;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.365);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resume-container {
+    display: flex;
+    flex-direction: column;
   }
   
   .resume-header {
@@ -124,15 +129,16 @@ header {
   
   .resume-content {
     display: flex;
+    justify-content: space-between;
   }
   
   .left-column {
-    flex: 1;
+    width: 50%;
     margin-right: 20px;
   }
   
   .right-column {
-    flex: 1;
+    width: 50%;
   }
   
   .section-divider {
@@ -141,19 +147,21 @@ header {
     margin: 20px 0;
   }
   
-  .experience-item {
+  .education,
+  .skills,
+  .languages,
+  .hobbies {
     margin-bottom: 20px;
   }
   
-  .experience-item h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #333;
+  .education {
+    height: 240px;
   }
   
-  .experience-item p {
-    margin-bottom: 5px;
-    color: #777;
+  .languages,
+  .skills,
+  .hobbies {
+    height: 180px;
   }
   
 
