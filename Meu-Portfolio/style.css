@@ -135,17 +135,52 @@ header {
   
   .left-column {
     width: 50%;
-    margin-right: 20px;
+    margin-right: 0;
   }
   
   .right-column {
     width: 50%;
+    margin-right: 20px;
+  }
+
+  .resume-content h2{ 
+    background-color: #555555a9;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 10px;
+  }
+
+  strong{
+    color: #333;
+  }
+
+  .resume-content i{
+    font-size: 19px;
+    padding-right: 5px;
+  }
+
+  .resume-container a{
+    color: #555;
+    text-decoration: none;
   }
   
+  .right-column .summary,
+  .right-column .work-experience{
+    text-align: justify;
+  }
+
   .section-divider {
     height: 1px;
     background-color: #ddd;
     margin: 20px 0;
+  }
+
+  .languages{
+    padding-top: 100px;
+  }
+
+  .hobbies{
+    padding-top: 40px;
   }
   
   .education,
