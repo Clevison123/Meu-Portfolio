@@ -114,7 +114,6 @@ header.scrolled {
   font-family: Arial, sans-serif;
   line-height: 1.5; 
   text-align: justify;
-  text-indent: 40px;
   
 }
 
@@ -230,13 +229,13 @@ header.scrolled {
 }
 
 .button-wrapper {
-  margin-top: 60px; /* Aumenta o espaçamento entre os botões e o conteúdo */
+  margin-top: 110px; /* Aumenta o espaçamento entre os botões e o conteúdo */
   display: flex;
   justify-content: center;
 }
 
 .custom-button {
-  padding: 10px; /* Aumenta o padding dos botões */
+  padding:10px; /* Aumenta o padding dos botões */
   margin: 5px;
   background-color: transparent;
   color: #4CAF50;
