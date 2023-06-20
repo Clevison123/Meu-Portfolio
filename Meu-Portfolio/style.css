@@ -128,19 +128,19 @@ header {
     color: #555;
   }
 
-  .wrapper {
+  #wrapper1,
+  #wrapper2 {
     position: relative;
   }
   
-  .wrapper .btn,
-  .wrapper .item {
+  #wrapper1 .item,
+  #wrapper2 .item-c {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #2ecc71;
-    color: #fff;
+    width: 30px;
+    height: 30px;
+    color: #2ecc71;
     border-radius: 50%;
     position: absolute;
     border: none;
@@ -148,47 +148,71 @@ header {
     z-index: 10;
   }
   
-  .wrapper .btn {
+  #wrapper1 .btn,
+  #wrapper2 .btns {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  #wrapper1 .btn,
+  #wrapper2 .btns {
     top: 50%;
     left: 10%;
     transform: translate(-50%, -50%);
   }
   
-  .wrapper .item {
+  #wrapper1 .item,
+  #wrapper2 .item-c {
     opacity: 0;
     visibility: hidden;
     transition: transform 0.5s ease;
   }
   
-  .wrapper.active .item {
+  #wrapper1.active .item,
+  #wrapper2.active .item-c {
     opacity: 1;
     visibility: visible;
+    background-color: #2ecc71;
   }
   
-  .wrapper.active .item:nth-child(1) {
-    transform: translate(-100px, -100px);
+  #wrapper1.active .item:nth-child(1),
+  #wrapper2.active .item-c:nth-child(1) {
+    transform: translate(-0px, -25px);
   }
   
-  .wrapper.active .item:nth-child(2) {
-    transform: translate(-50px, -150px);
+  #wrapper1.active .item:nth-child(2),
+  #wrapper2.active .item-c:nth-child(2) {
+    transform: translate(30px, -60px);
   }
   
-  .wrapper.active .item:nth-child(3) {
-    transform: translate(50px, -150px);
+  #wrapper1.active .item:nth-child(3),
+  #wrapper2.active .item-c:nth-child(3) {
+    transform: translate(105px, -60px);
   }
   
-  .wrapper.active .item:nth-child(4) {
-    transform: translate(100px, -100px);
+  #wrapper1.active .item:nth-child(4),
+  #wrapper2.active .item-c:nth-child(4) {
+    transform: translate(135px, -25px);
   }
   
-  .wrapper.active .item:nth-child(5) {
-    transform: translate(50px, -50px);
+  #wrapper1.active .item:nth-child(5),
+  #wrapper2.active .item-c:nth-child(5) {
+    transform: translate(105px, 10px);
   }
   
-  .wrapper.active .item:nth-child(6) {
-    transform: translate(-50px, -50px);
+  #wrapper1.active .item:nth-child(6),
+  #wrapper2.active .item-c:nth-child(6) {
+    transform: translate(30px, 10px);
   }
-  
   
   
   .resume-content {
