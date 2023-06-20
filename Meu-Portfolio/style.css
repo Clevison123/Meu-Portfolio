@@ -169,6 +169,65 @@ header {
     text-align: justify;
   }
 
+  .skills li {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .skills li::after {
+    content: attr(data-nivel);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 8px;
+    background-color: #3333336b;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  .basico::after {
+    background-color: green;
+  }
+
+  .intermediario::after {
+    background-color: orange;
+  }
+
+  .avancado::after {
+    background-color: red;
+  }
+  
+  .languages li {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .languages li::after {
+    content: attr(data-nivel);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 8px;
+    background-color: #3333336b;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  .basic::after {
+    background-color: green;
+  }
+
+  .native::after {
+    background-color: blue;
+  }
+
+
   .section-divider {
     height: 1px;
     background-color: #ddd;
