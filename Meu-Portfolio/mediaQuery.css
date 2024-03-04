@@ -2,6 +2,85 @@
 
 @media screen and (max-width: 500px) {
 
+    .nav-container{
+        display: none;
+    }
+
+    .hambuguer{
+        display: block;
+        margin-right: -3rem;
+    }
+
+    .logo{
+        margin-left: -3rem;
+    }
+
+    .container-text{
+        padding-top: 13rem;
+    }
+
+    .portfolio .portfolio-item {
+    width: 100%;
+    padding: 0 10px; 
+  }
+
+  .portfolio .portfolio-projetos {
+    padding: 2rem; 
+  }
+
+  .button-wrapper {
+    margin-top: 50px; 
+  }
+
+  .custom-button {
+    padding: 0 15px; 
+    margin: 4rem 1rem;
+    font-size: 40px; 
+  }
+
+  .prev::before,
+  .next::before {
+    font-size: 40px; 
+  }
+
+  #projetos-pessoais .meu-portfolio {
+    overflow-x: hidden; /* Adicionando a rolagem horizontal para acomodar os projetos */
+    white-space: nowrap; /* Impedindo que os itens da galeria quebrem para a próxima linha */
+  }
+
+  #projetos-pessoais .img-pessoal {
+    width: 100%; /* Definindo a largura total para cada imagem */
+    max-width: 100%;
+    display: inline-block; /* Tornando as imagens exibidas em linha */
+    vertical-align: top; /* Alinhando as imagens ao topo */
+  }
+
+  #projetos-pessoais p{
+    font-size: 18px;
+  }
+
+  #meus-trabalhos .meus-trabalhos {
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    white-space: nowrap; /* Impede que os itens quebrem para a próxima linha */
+  }
+  
+  .portfolio-trabalho .tra-portfolio {
+    display: flex;
+    overflow-x: hidden; /* Adiciona uma barra de rolagem se necessário */
+    gap: 20px; /* Espaçamento entre as imagens */
+  }
+  
+  .portfolio-trabalho .img-tra {
+    flex: 0 0 auto; /* Impede que as imagens se redimensionem */
+    width: 350px; /* Largura fixa para as imagens */
+    border: 5px solid #2ecc71;
+  }
+  
+  .portfolio-trabalho .img-tra p {
+    margin: 0; /* Remova margens extras */
+  }
+  
+
 }
 
 @media screen and (min-width:501px) and (max-width: 768px) {
