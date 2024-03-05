@@ -39,7 +39,7 @@ header {
   text-align: center;
   position: fixed;
   width: 100%;
-  padding: 1.3rem;
+  padding: .4rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -85,7 +85,7 @@ header.scrolled {
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: var(--h2-font);
   cursor: pointer;
 }
 
@@ -95,13 +95,13 @@ header.scrolled {
 
 .text h3 {
   color: #fff;
-  font-size: 25px;
+  font-size: var(--h2-font);
   margin-top: 25px;
   margin-bottom: -33px;
 }
 
 .text h1 {
-  font-size: 35px;
+  font-size: var(--h2-font) ;
   color: #fff;
   margin-top: 25px;
 }
@@ -113,7 +113,7 @@ header.scrolled {
 
 .text p {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   margin-top: 20px;
   text-indent: 2rem;
@@ -179,13 +179,11 @@ header.scrolled {
   text-align: center;
   background-color: #000000db;
   color: #fff;
-  padding: 2.5rem 2rem 1rem 2rem;
   scroll-margin-top: 60px;
 }
 
 .portfolio h1 {
   padding-top: 2rem;
-  margin-bottom: -5px;
   font-size: 30px;
 }
 
@@ -198,7 +196,7 @@ header.scrolled {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .portfolio .portfolio-item {
@@ -211,7 +209,7 @@ header.scrolled {
   font-family: 'Arial', sans-serif;
   font-size: 22px;
   letter-spacing: 1px;
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
 
 .portfolio .portfolio-item h2 span {
@@ -262,8 +260,8 @@ header.scrolled {
 }
 
 .custom-button {
-  padding:10px; /* Aumenta o padding dos botões */
-  margin: 5px;
+  padding: 0 1rem; /* Aumenta o padding dos botões */
+  margin: 0 .4rem;
   background-color: transparent;
   color: #4CAF50;
   border: none;
