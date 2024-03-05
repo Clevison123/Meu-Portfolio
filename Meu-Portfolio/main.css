@@ -65,13 +65,7 @@ header.scrolled {
 .nav-container a {
   color: #fff;
   font-size: 20px;
-}
-
-.hambuguer{
-  color: #4CAF50;
-  font-size: 1.4rem;
-  cursor: pointer;
-  display: none;
+  padding: 0 1.4rem;
 }
 
 .nav-container a:hover {
@@ -166,12 +160,18 @@ header.scrolled {
   cursor: pointer;
 }
 
-
-
 .saber-mais:hover {
   background-color: #2ecc71;
   color: #fff;
   transition: 0.5s;
+}
+
+.hamburger{
+  display: none;
+}
+
+#sidebar{
+  display: none;
 }
 
 /* Portfolio section */
