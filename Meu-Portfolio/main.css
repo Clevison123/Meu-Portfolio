@@ -319,9 +319,11 @@ header.scrolled {
   color: #2ecc71;
 }
 
-p{
+.img-pessoal p{
   color: white;
   font-size: 25px;
+  text-align: center;
+  
 }
 
 #projetos-pessoais .portfolio-pessoal {

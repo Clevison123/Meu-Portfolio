@@ -91,8 +91,9 @@
   color: #333;
 }
 
+/*---------------------------------*/
 
-    .portfolio .portfolio-item {
+  .portfolio .portfolio-item {
     width: 100%;
     padding: 0 10px; 
   }
@@ -116,6 +117,8 @@
     font-size: 40px; 
   }
 
+  /*---------------------------------*/
+
   #projetos-pessoais .meu-portfolio {
     overflow-x: hidden; /* Adicionando a rolagem horizontal para acomodar os projetos */
     white-space: nowrap; /* Impedindo que os itens da galeria quebrem para a próxima linha */
@@ -131,6 +134,8 @@
   #projetos-pessoais p{
     font-size: 18px;
   }
+
+  /*---------------------------------*/
 
   #meus-trabalhos .meus-trabalhos {
     overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
@@ -168,4 +173,123 @@
   .logo h2{
     font-size: 12px;
   }
+
+  .text h3{
+    font-size: 23px;
+    padding-bottom: .2rem;
+  }
+
+  .text h1{
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
+
+  .redes-sociais a {
+    font-size: 22px;
+  }
+
+  .saber-mais {
+    font-size: 18px;
+  }
+
+  /*---------------------------------*/
+  .portfolio{
+    scroll-margin-top: 30px;
+  }
+
+  .portfolio h1{
+    font-size: 23px;
+  }
+
+  .portfolio .portfolio-item h2{
+    font-size: 20px;
+  }
+
+  
+.portfolio .portfolio-item .image-wrapper p{
+  font-size: 20px;
+}
+
+  .portfolio .portfolio-item {
+    width: 100%;
+    padding: 0 10px; 
+  }
+
+  .portfolio .portfolio-projetos {
+    padding: 2rem; 
+  }
+
+  .button-wrapper {
+    margin-top: 50px; 
+  }
+
+  .custom-button {
+    padding: 0 15px; 
+    margin: 4rem 1rem;
+    font-size: 40px; 
+  }
+
+  .prev::before,
+  .next::before {
+    font-size: 40px; 
+  }
+
+  /*---------------------------------*/
+
+  #projetos-pessoais h1{
+    font-size: 23px ;
+  }
+
+  #projetos-pessoais .portfolio-pessoal{
+    padding: 0 25%;
+  }
+
+  #projetos-pessoais .meu-portfolio {
+    overflow-x: hidden; 
+    white-space: nowrap; 
+    text-align: center;
+    gap: 100%;
+  }
+
+  #projetos-pessoais .img-pessoal {
+    width: 100%; 
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top; 
+  }
+
+  .img-pessoal p{
+    font-size: 20px;
+  }
+
+  #projetos-pessoais p{
+    font-size: 18px;
+  }
+
+  /*---------------------------------*/
+
+  #meus-trabalhos .meus-trabalhos {
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    white-space: nowrap; /* Impede que os itens quebrem para a próxima linha */
+  }
+  
+  .portfolio-trabalho .tra-portfolio {
+    display: flex;
+    overflow-x: hidden; /* Adiciona uma barra de rolagem se necessário */
+    gap: 20px; /* Espaçamento entre as imagens */
+  }
+  
+  .portfolio-trabalho .img-tra {
+    flex: 0 0 auto; /* Impede que as imagens se redimensionem */
+    width: 340px; /* Largura fixa para as imagens */
+    border: 5px solid #2ecc71;
+  }
+  
+  .portfolio-trabalho .img-tra p {
+    margin: 0; /* Remova margens extras */
+  }
+
 }
