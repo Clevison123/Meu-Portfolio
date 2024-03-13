@@ -327,13 +327,13 @@ header.scrolled {
 }
 
 #projetos-pessoais .portfolio-pessoal {
-  width: 77%;
+  width: 76.6%;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  border: 6px solid #4CAF50;
+  border: 5px solid #4CAF50;
   border-radius: 10px;
 }
 
@@ -341,7 +341,6 @@ header.scrolled {
   display: flex;
   flex-wrap: nowrap;
   scroll-snap-align: start;
-  
   transition: transform 0.3s ease;
 }
 
@@ -349,7 +348,7 @@ header.scrolled {
   text-align: center;
   width: 350px;
   height: 350px;
-  border: 6px solid #0000001c;
+  border: 6px solid rgba(255, 255, 255, 0.853);
   padding: 0px;
   box-sizing: content-box;
 }
@@ -440,6 +439,7 @@ p {
   width: 74.3%;
   overflow: hidden;
   display: flex;
+  scrollbar-width: none;
   border: 5px solid rgba(255, 255, 255, 0.853);
   border-radius: 10px;
 }
