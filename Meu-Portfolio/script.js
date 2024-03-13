@@ -22,27 +22,16 @@ btn.addEventListener('click', () => {
 
 // =======================================
 
-document.addEventListener('DOMContentLoaded', function() {
-  const prevButton = document.querySelector('.prev2');
-  const nextButton = document.querySelector('.next2');
+window.addEventListener('DOMContentLoaded', () => {
   const portfolio = document.querySelector('.meu-portfolio');
-  const images = document.querySelectorAll('.img-pessoal');
-
-  let currentIndex = 0;
-
-  prevButton.addEventListener('click', function() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      images[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    }
-  });
-
-  nextButton.addEventListener('click', function() {
-    if (currentIndex < images.length - 1) {
-      currentIndex++;
-      images[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    }
-  });
+  const images = portfolio.querySelectorAll('.img-pessoal');
+  const gapSize = 2 * parseInt(window.getComputedStyle(portfolio).gap);
+  
+  // Calcula a largura total do portfolio com base no número de imagens e no espaçamento entre elas
+  const totalWidth = (images.length * images[0].offsetWidth) + ((images.length - 1) * gapSize);
+  
+  // Define a largura do portfolio
+  portfolio.style.width = totalWidth + 'px';
 });
 
 

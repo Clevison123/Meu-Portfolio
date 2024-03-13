@@ -327,18 +327,21 @@ header.scrolled {
 }
 
 #projetos-pessoais .portfolio-pessoal {
-  width: 100%;
-  overflow: hidden;
+  width: 77%;
+  overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
-  gap: 20px;
-  padding: 0 10%;
-  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border: 6px solid #4CAF50;
+  border-radius: 10px;
 }
 
 #projetos-pessoais .meu-portfolio {
   display: flex;
-  gap: 20px;
   flex-wrap: nowrap;
+  scroll-snap-align: start;
+  
   transition: transform 0.3s ease;
 }
 
@@ -346,9 +349,9 @@ header.scrolled {
   text-align: center;
   width: 350px;
   height: 350px;
-  border: 5px solid #2ecc71;
+  border: 6px solid #0000001c;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 #projetos-pessoais .img-pessoal img {
@@ -434,17 +437,15 @@ p {
 }
 
 #meus-trabalhos .portfolio-trabalho {
-  width: 100%;
+  width: 74.3%;
   overflow: hidden;
   display: flex;
-  gap: 20px;
-  padding: 0 10%;
-  scroll-behavior: smooth;
+  border: 5px solid rgba(255, 255, 255, 0.853);
+  border-radius: 10px;
 }
 
 #meus-trabalhos .tra-portfolio {
   display: flex;
-  gap: 20px;
   flex-wrap: nowrap;
   transition: transform 0.3s ease;
 }
@@ -453,7 +454,7 @@ p {
   text-align: center;
   width: 350px;
   height: 350px;
-  border: 5px solid #2ecc71;
+  border: 5px solid #4CAF50;
   padding: 0px;
   box-sizing: border-box;
 }
