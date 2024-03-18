@@ -22,17 +22,91 @@ btn.addEventListener('click', () => {
 
 // =======================================
 
-window.addEventListener('DOMContentLoaded', () => {
-  const portfolio = document.querySelector('.meu-portfolio');
-  const images = portfolio.querySelectorAll('.img-pessoal');
-  const gapSize = 2 * parseInt(window.getComputedStyle(portfolio).gap);
-  
-  // Calcula a largura total do portfolio com base no número de imagens e no espaçamento entre elas
-  const totalWidth = (images.length * images[0].offsetWidth) + ((images.length - 1) * gapSize);
-  
-  // Define a largura do portfolio
-  portfolio.style.width = totalWidth + 'px';
+// Mobile responsividade
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const content = document.getElementById('content');
+const items = document.getElementsByClassName('portfolio-item');
+
+let currentItem = 0;
+const totalItems = items.length;
+let itemsPerView = 4;
+const autoInterval = 3000;
+let autoMode = true;
+
+const showCurrentItems = () => {
+  for (let i = 0; i < totalItems; i++) {
+    items[i].style.display = 'none';
+  }
+
+  for (let i = currentItem; i < currentItem + itemsPerView; i++) {
+    const index = i % totalItems;
+    items[index].style.display = 'block';
+  }
+};
+
+const nextItem = () => {
+  currentItem++;
+  if (currentItem >= totalItems) {
+    currentItem = 0;
+  }
+  showCurrentItems();
+};
+
+const checkWindowSize = () => {
+  const windowWidth = window.innerWidth;
+  if (windowWidth <= 600) {
+    itemsPerView = 1;
+  } else if (windowWidth >= 601 && windowWidth <= 768) {
+    itemsPerView = 2;
+  } else if (windowWidth >= 769 && windowWidth <= 992) {
+    itemsPerView = 3;
+  } else if (windowWidth >= 993 && windowWidth <= 1199) {
+    itemsPerView = 3;
+  }  else {
+    itemsPerView = 4;
+  }
+};
+
+prevButton.addEventListener('click', () => {
+  autoMode = false;
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = totalItems - 1;
+  }
+  showCurrentItems();
 });
+
+nextButton.addEventListener('click', () => {
+  autoMode = false;
+  nextItem();
+});
+
+for (let i = 0; i < totalItems; i++) {
+  items[i].addEventListener('mouseover', () => {
+    autoMode = false;
+  });
+
+  items[i].addEventListener('mouseout', () => {
+    autoMode = true;
+  });
+}
+
+window.addEventListener('resize', () => {
+  checkWindowSize();
+  showCurrentItems();
+});
+
+checkWindowSize();
+showCurrentItems();
+items[currentItem].classList.add('active');
+
+setInterval(() => {
+  if (autoMode) {
+    nextItem();
+  }
+}, autoInterval);
+
 
 
 //==========================================================
