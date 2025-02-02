@@ -5,9 +5,119 @@
   --bg-color: #ffffff;
   --main-color: #4CAF50;
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+  --font-size-small: 12px;
+  --font-size-medium: 18px;
+  --font-size-large: 23px;
 }
 
-/* General Styles for Mobile */
+/* General Styles */
+.nav-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  color: var(--main-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.logo {
+  margin-left: -3rem;
+}
+
+.container-text {
+  padding-top: 13rem;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--bg-color);
+  transition: left 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+  box-shadow: var(--shadow);
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 1.25rem;
+  margin-top: 3.125rem;
+}
+
+#sidebar ul li {
+  margin-bottom: 0.625rem;
+}
+
+#sidebar ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+  color: var(--bg-color);
+  background-color: var(--main-color);
+}
+
+#sidebar a.active {
+  color: var(--main-color);
+}
+
+#closeButton {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+#closeButton:hover {
+  color: var(--text-color);
+}
+
+.portfolio .portfolio-item {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.portfolio .portfolio-projetos {
+  padding: 2rem;
+}
+
+.button-wrapper {
+  margin-top: 50px;
+}
+
+.custom-button {
+  padding: 0 15px;
+  margin: 4rem 1rem;
+  font-size: 40px;
+}
+
+.prev::before,
+.next::before {
+  font-size: 40px;
+}
+
+/* Media Queries */
 @media screen and (max-width: 500px) {
   .nav-container {
     display: none;
@@ -15,9 +125,6 @@
 
   .hamburger {
     display: block;
-    color: var(--main-color);
-    font-size: 1.4rem;
-    cursor: pointer;
     margin-right: -3rem;
   }
 
@@ -29,75 +136,6 @@
     padding-top: 13rem;
   }
 
-  /* Sidebar Styles */
-  #sidebar {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 250px;
-    height: 100%;
-    background-color: var(--bg-color);
-    transition: left 0.3s ease;
-    z-index: 9999;
-    overflow-y: auto;
-    display: block;
-    box-shadow: var(--shadow);
-  }
-
-  #sidebar.active {
-    left: 0;
-  }
-
-  #sidebar ul {
-    list-style: none;
-    padding: 1.25rem;
-    margin-top: 3.125rem;
-  }
-
-  #sidebar ul li {
-    margin-bottom: 0.625rem;
-  }
-
-  #sidebar ul li a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.25rem;
-    transition: all 0.3s ease;
-  }
-
-  #sidebar ul li a:hover {
-    color: var(--bg-color);
-    background-color: var(--main-color);
-  }
-
-  #sidebar a.active {
-    color: var(--main-color);
-  }
-
-  #sidebar a.active:hover {
-    color: var(--main-color);
-    background-color: transparent;
-  }
-
-  #closeButton {
-    position: absolute;
-    top: 0.625rem;
-    right: 0.625rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #999;
-    transition: color 0.3s ease;
-  }
-
-  #closeButton:hover {
-    color: #333;
-  }
-
-  /* Portfolio Styles */
   .portfolio .portfolio-item {
     width: 50%;
   }
@@ -111,144 +149,54 @@
   }
 
   .custom-button {
-    padding: 0 15px;
     margin: 2rem 1rem;
   }
-
-  .prev::before,
-  .next::before {
-    font-size: 40px;
-  }
-
-  /* Personal Projects Styles */
-  
 }
 
-/* Styles for Tablets and Small Desktops */
 @media screen and (min-width: 501px) and (max-width: 768px) {
   .nav-container a {
-    font-size: 12px;
+    font-size: var(--font-size-small);
     gap: 0;
     margin: 0.5rem;
     padding: 0.1rem;
   }
 
   .logo h2 {
-    font-size: 12px;
+    font-size: var(--font-size-small);
   }
 
   .text h3 {
-    font-size: 23px;
+    font-size: var(--font-size-large);
     padding-bottom: 0.2rem;
   }
 
   .text h1 {
-    font-size: 18px;
+    font-size: var(--font-size-medium);
   }
 
   .text p {
-    font-size: 15px;
+    font-size: var(--font-size-small);
   }
 
   .redes-sociais a {
-    font-size: 22px;
+    font-size: var(--font-size-medium);
   }
 
   .saber-mais {
-    font-size: 18px;
-  }
-
-  /* Portfolio Styles */
-  .portfolio {
-    scroll-margin-top: 30px;
+    font-size: var(--font-size-medium);
   }
 
   .portfolio h1 {
-    font-size: 23px;
+    font-size: var(--font-size-large);
   }
 
   .portfolio .portfolio-item h2 {
-    font-size: 20px;
+    font-size: var(--font-size-medium);
   }
 
   .portfolio .portfolio-item .image-wrapper p {
-    font-size: 20px;
+    font-size: var(--font-size-medium);
   }
 
-  .portfolio .portfolio-item {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .portfolio .portfolio-projetos {
-    padding: 2rem;
-  }
-
-  .button-wrapper {
-    margin-top: 50px;
-  }
-
-  .custom-button {
-    padding: 0 15px;
-    margin: 4rem 1rem;
-    font-size: 40px;
-  }
-
-  .prev::before,
-  .next::before {
-    font-size: 40px;
-  }
-
-  /* Personal Projects Styles */
-  #projetos-pessoais h1 {
-    font-size: 23px;
-  }
-
-  #projetos-pessoais .portfolio-pessoal {
-    padding: 0 25%;
-  }
-
-  #projetos-pessoais .meu-portfolio {
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-align: center;
-    gap: 100%;
-  }
-
-  #projetos-pessoais .img-pessoal {
-    width: 100%;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .img-pessoal p {
-    font-size: 20px;
-  }
-
-  #projetos-pessoais p {
-    font-size: 18px;
-  }
-
-  /* Work Projects Styles */
-  #meus-trabalhos .meus-trabalhos {
-    overflow-x: hidden;
-    white-space: nowrap;
-  }
-
-  .portfolio-trabalho .tra-portfolio {
-    display: flex;
-    overflow-x: hidden;
-    gap: 20px;
-  }
-
-  .portfolio-trabalho .img-tra {
-    flex: 0 0 auto;
-    width: 340px;
-    border: 5px solid var(--main-color);
-  }
-
-  .portfolio-trabalho .img-tra p {
-    margin: 0;
-  }
+  
 }
