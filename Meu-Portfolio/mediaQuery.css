@@ -1,184 +1,148 @@
 @charset "UTF-8";
 
+/* CSS Variables */
+:root {
+  --bg-color: #ffffff;
+  --main-color: #4CAF50;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles for Mobile */
 @media screen and (max-width: 500px) {
+  .nav-container {
+    display: none;
+  }
 
-    .nav-container{
-        display: none;
-    }
+  .hamburger {
+    display: block;
+    color: var(--main-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-right: -3rem;
+  }
 
-    .hamburger{
-        display: block;
-        color: #4CAF50;
-        font-size: 1.4rem;
-        cursor: pointer;
-        margin-right: -3rem;
-    }
+  .logo {
+    margin-left: -3rem;
+  }
 
-    .logo{
-        margin-left: -3rem;
-    }
+  .container-text {
+    padding-top: 13rem;
+  }
 
-    .container-text{
-        padding-top: 13rem;
-    }
+  /* Sidebar Styles */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--bg-color);
+    transition: left 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+    display: block;
+    box-shadow: var(--shadow);
+  }
 
-    /* Adicione aqui seus estilos CSS para o menu lateral */
+  #sidebar.active {
+    left: 0;
+  }
 
-#sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 250px;
-  height: 100%;
-  background-color: var(--bg-color);
-  transition: left 0.3s ease;
-  z-index: 9999;
-  overflow-y: auto;
-  display: block;
-  box-shadow: var(--shadow);
-}
+  #sidebar ul {
+    list-style: none;
+    padding: 1.25rem;
+    margin-top: 3.125rem;
+  }
 
-#sidebar.active {
-  left: 0;
-}
+  #sidebar ul li {
+    margin-bottom: 0.625rem;
+  }
 
-#sidebar ul {
-  list-style: none;
-  padding: 1.25rem;
-  margin-top: 3.125rem;
-}
+  #sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
 
-#sidebar ul li {
-  margin-bottom: 0.625rem;
-}
+  #sidebar ul li a:hover {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+  }
 
-#sidebar ul li a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease;
-}
+  #sidebar a.active {
+    color: var(--main-color);
+  }
 
-#sidebar ul li a:hover {
-  color: var(--bg-color);
-  background-color: var(--main-color);
-}
+  #sidebar a.active:hover {
+    color: var(--main-color);
+    background-color: transparent;
+  }
 
-#sidebar a.active {
-  color: var(--main-color);
-}
+  #closeButton {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #999;
+    transition: color 0.3s ease;
+  }
 
-#sidebar a.active:hover {
-  color: var(--main-color);
-  background-color: transparent;
-}
+  #closeButton:hover {
+    color: #333;
+  }
 
-#closeButton {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #999;
-  transition: color 0.3s ease;
-}
-
-#closeButton:hover {
-  color: #333;
-}
-
-/*---------------------------------*/
-
+  /* Portfolio Styles */
   .portfolio .portfolio-item {
-    width: 100%;
+    width: 50%;
   }
 
   .portfolio .portfolio-projetos {
-    padding: 2rem; 
+    padding: 1rem;
   }
 
   .button-wrapper {
-    margin-top: 50px; 
+    margin-top: 1rem;
   }
 
   .custom-button {
-    padding: 0 15px; 
-    margin: 4rem 1rem;
-    font-size: 40px; 
+    padding: 0 15px;
+    margin: 2rem 1rem;
   }
 
   .prev::before,
   .next::before {
-    font-size: 40px; 
+    font-size: 40px;
   }
 
-  /*---------------------------------*/
-
-  #projetos-pessoais .meu-portfolio {
-    overflow-x: hidden; /* Adicionando a rolagem horizontal para acomodar os projetos */
-    white-space: nowrap; /* Impedindo que os itens da galeria quebrem para a próxima linha */
-  }
-
-  #projetos-pessoais .img-pessoal {
-    width: 100%; /* Definindo a largura total para cada imagem */
-    max-width: 100%;
-    display: inline-block; /* Tornando as imagens exibidas em linha */
-    vertical-align: top; /* Alinhando as imagens ao topo */
-  }
-
-  #projetos-pessoais p{
-    font-size: 18px;
-  }
-
-  /*---------------------------------*/
-
-  #meus-trabalhos .meus-trabalhos {
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-    white-space: nowrap; /* Impede que os itens quebrem para a próxima linha */
-  }
+  /* Personal Projects Styles */
   
-  .portfolio-trabalho .tra-portfolio {
-    display: flex;
-    overflow-x: hidden; /* Adiciona uma barra de rolagem se necessário */
-    gap: 20px; /* Espaçamento entre as imagens */
-  }
-  
-  .portfolio-trabalho .img-tra {
-    flex: 0 0 auto; /* Impede que as imagens se redimensionem */
-    width: 350px; /* Largura fixa para as imagens */
-    border: 5px solid #2ecc71;
-  }
-  
-  .portfolio-trabalho .img-tra p {
-    margin: 0; /* Remova margens extras */
-  }
-  
-
 }
 
-@media screen and (min-width:501px) and (max-width: 768px) {
-
+/* Styles for Tablets and Small Desktops */
+@media screen and (min-width: 501px) and (max-width: 768px) {
   .nav-container a {
     font-size: 12px;
     gap: 0;
-    margin: .5rem;
-    padding: .1rem;
+    margin: 0.5rem;
+    padding: 0.1rem;
   }
 
-  .logo h2{
+  .logo h2 {
     font-size: 12px;
   }
 
-  .text h3{
+  .text h3 {
     font-size: 23px;
-    padding-bottom: .2rem;
+    padding-bottom: 0.2rem;
   }
 
-  .text h1{
+  .text h1 {
     font-size: 18px;
   }
 
@@ -194,101 +158,97 @@
     font-size: 18px;
   }
 
-  /*---------------------------------*/
-  .portfolio{
+  /* Portfolio Styles */
+  .portfolio {
     scroll-margin-top: 30px;
   }
 
-  .portfolio h1{
+  .portfolio h1 {
     font-size: 23px;
   }
 
-  .portfolio .portfolio-item h2{
+  .portfolio .portfolio-item h2 {
     font-size: 20px;
   }
 
-  
-.portfolio .portfolio-item .image-wrapper p{
-  font-size: 20px;
-}
+  .portfolio .portfolio-item .image-wrapper p {
+    font-size: 20px;
+  }
 
   .portfolio .portfolio-item {
     width: 100%;
-    padding: 0 10px; 
+    padding: 0 10px;
   }
 
   .portfolio .portfolio-projetos {
-    padding: 2rem; 
+    padding: 2rem;
   }
 
   .button-wrapper {
-    margin-top: 50px; 
+    margin-top: 50px;
   }
 
   .custom-button {
-    padding: 0 15px; 
+    padding: 0 15px;
     margin: 4rem 1rem;
-    font-size: 40px; 
+    font-size: 40px;
   }
 
   .prev::before,
   .next::before {
-    font-size: 40px; 
+    font-size: 40px;
   }
 
-  /*---------------------------------*/
-
-  #projetos-pessoais h1{
-    font-size: 23px ;
+  /* Personal Projects Styles */
+  #projetos-pessoais h1 {
+    font-size: 23px;
   }
 
-  #projetos-pessoais .portfolio-pessoal{
+  #projetos-pessoais .portfolio-pessoal {
     padding: 0 25%;
   }
 
   #projetos-pessoais .meu-portfolio {
-    overflow-x: hidden; 
-    white-space: nowrap; 
+    overflow-x: hidden;
+    white-space: nowrap;
     text-align: center;
     gap: 100%;
   }
 
   #projetos-pessoais .img-pessoal {
-    width: 100%; 
+    width: 100%;
     max-width: 100%;
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
   }
 
-  .img-pessoal p{
+  .img-pessoal p {
     font-size: 20px;
   }
 
-  #projetos-pessoais p{
+  #projetos-pessoais p {
     font-size: 18px;
   }
 
-  /*---------------------------------*/
-
+  /* Work Projects Styles */
   #meus-trabalhos .meus-trabalhos {
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-    white-space: nowrap; /* Impede que os itens quebrem para a próxima linha */
+    overflow-x: hidden;
+    white-space: nowrap;
   }
-  
+
   .portfolio-trabalho .tra-portfolio {
     display: flex;
-    overflow-x: hidden; /* Adiciona uma barra de rolagem se necessário */
-    gap: 20px; /* Espaçamento entre as imagens */
-  }
-  
-  .portfolio-trabalho .img-tra {
-    flex: 0 0 auto; /* Impede que as imagens se redimensionem */
-    width: 340px; /* Largura fixa para as imagens */
-    border: 5px solid #2ecc71;
-  }
-  
-  .portfolio-trabalho .img-tra p {
-    margin: 0; /* Remova margens extras */
+    overflow-x: hidden;
+    gap: 20px;
   }
 
+  .portfolio-trabalho .img-tra {
+    flex: 0 0 auto;
+    width: 340px;
+    border: 5px solid var(--main-color);
+  }
+
+  .portfolio-trabalho .img-tra p {
+    margin: 0;
+  }
 }
