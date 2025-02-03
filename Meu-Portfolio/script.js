@@ -1,17 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const sidebar = document.getElementById('sidebar');
-  const closeButton = document.getElementById('closeButton');
-
-  hamburger.addEventListener('click', function() {
-      sidebar.classList.toggle('active');
-  });
-
-  closeButton.addEventListener('click', function() {
-      sidebar.classList.remove('active');
-  });
-});
-
 //========================================
 const btn = document.querySelector('.btn');
 const wrapper = document.querySelector('.wrapper');

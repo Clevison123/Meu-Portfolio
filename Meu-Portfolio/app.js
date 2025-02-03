@@ -1,3 +1,43 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const sidebar = document.getElementById("sidebar");
+  const closeButton = document.getElementById("closeButton");
+
+  if (!hamburger || !sidebar || !closeButton) {
+    console.error("Error: Elements missing. Check your HTML.");
+    return;
+  }
+
+  // Open Sidebar
+  hamburger.addEventListener("click", () => {
+    sidebar.classList.add("active");
+  });
+
+  // Close Sidebar When Clicking the Close Button
+  closeButton.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
+
+  // Close Sidebar When Clicking Outside
+  document.addEventListener("click", (event) => {
+    if (
+      !sidebar.contains(event.target) &&
+      !hamburger.contains(event.target) &&
+      sidebar.classList.contains("active")
+    ) {
+      sidebar.classList.remove("active");
+    }
+  });
+
+  // Close Sidebar When Clicking Any Link Inside It
+  document.querySelectorAll("#sidebar a").forEach((link) => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+    });
+  });
+});
+//////////////////////////////////////////////////////////
+
 window.addEventListener('scroll', function() {
   var header = document.querySelector('header');
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -8,11 +48,6 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
-
-
-
-
-
 
 //meu portfolio projects
 
@@ -57,55 +92,3 @@ document.addEventListener("DOMContentLoaded", function() {
     showImage(currentImageIndex);
   });
 });
-
-//meu portfolio projects pessoais
-
-const btnPrev = document.querySelector(".prev2");
-const btnNext = document.querySelector(".next2");
-const portfolio = document.querySelector(".meu-portfolio");
-const divs = portfolio.querySelectorAll(".img-pessoal");
-const divWidth = divs[0].offsetWidth;
-const divsPerView = 3;
-const totalDivs = divs.length;
-let currentPosition = 0;
-
-btnNext.addEventListener("click", () => {
-  if (currentPosition < totalDivs - divsPerView) {
-    currentPosition++;
-    portfolio.style.transform = `translateX(-${currentPosition * divWidth}px)`;
-  }
-});
-
-btnPrev.addEventListener("click", () => {
-  if (currentPosition > 0) {
-    currentPosition--;
-    portfolio.style.transform = `translateX(-${currentPosition * divWidth}px)`;
-  }
-});
-
-
-// meus trabalhos
-
-const btnPrev3 = document.querySelector(".prev3");
-const btnNext3 = document.querySelector(".next3");
-const portfolio3 = document.querySelector(".tra-portfolio");
-const divs3 = portfolio3.querySelectorAll(".img-tra");
-const divWidth3 = divs3[0].offsetWidth;
-const divsPerView3 = 3;
-const totalDivs3 = divs3.length;
-let currentPosition3 = 0;
-
-btnNext3.addEventListener("click", () => {
-  if (currentPosition3 < totalDivs3 - divsPerView3) {
-    currentPosition3++;
-    portfolio3.style.transform = `translateX(-${currentPosition3 * divWidth3}px)`;
-  }
-});
-
-btnPrev3.addEventListener("click", () => {
-  if (currentPosition3 > 0) {
-    currentPosition3--;
-    portfolio3.style.transform = `translateX(-${currentPosition3 * divWidth3}px)`;
-  }
-});
-
