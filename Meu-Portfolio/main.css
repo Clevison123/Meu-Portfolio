@@ -254,7 +254,7 @@ header.scrolled {
 }
 
 .button-wrapper {
-  margin-top: 110px; /* Aumenta o espaçamento entre os botões e o conteúdo */
+  padding-top: 5rem;
   display: flex;
   justify-content: center;
 }

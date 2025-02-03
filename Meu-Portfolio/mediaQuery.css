@@ -12,10 +12,6 @@
 }
 
 /* General Styles */
-.nav-container {
-  display: flex;
-  gap: 1rem;
-}
 
 .hamburger {
   display: none;
@@ -24,13 +20,6 @@
   cursor: pointer;
 }
 
-.logo {
-  margin-left: -3rem;
-}
-
-.container-text {
-  padding-top: 13rem;
-}
 
 #sidebar {
   position: fixed;
@@ -93,30 +82,6 @@
   color: var(--text-color);
 }
 
-.portfolio .portfolio-item {
-  width: 100%;
-  padding: 0 10px;
-}
-
-.portfolio .portfolio-projetos {
-  padding: 2rem;
-}
-
-.button-wrapper {
-  margin-top: 50px;
-}
-
-.custom-button {
-  padding: 0 15px;
-  margin: 4rem 1rem;
-  font-size: 40px;
-}
-
-.prev::before,
-.next::before {
-  font-size: 40px;
-}
-
 /* Media Queries */
 @media screen and (max-width: 500px) {
   .nav-container {
@@ -133,7 +98,8 @@
   }
 
   .container-text {
-    padding-top: 13rem;
+    padding: 8rem 2rem ;
+    text-align: center;
   }
 
   .portfolio .portfolio-item {
@@ -143,40 +109,35 @@
   .portfolio .portfolio-projetos {
     padding: 1rem;
   }
+  .portfolio .portfolio-item h2{
+    font-size: 1.1rem;
+  }
 
   .button-wrapper {
     margin-top: 1rem;
   }
 
   .custom-button {
-    margin: 2rem 1rem;
+    font-size: 24px;
+    margin: 1rem 1rem;
   }
 }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   .nav-container a {
     font-size: var(--font-size-small);
-    gap: 0;
     margin: 0.5rem;
     padding: 0.1rem;
   }
 
   .logo h2 {
-    font-size: var(--font-size-small);
-  }
-
-  .text h3 {
-    font-size: var(--font-size-large);
-    padding-bottom: 0.2rem;
-  }
-
-  .text h1 {
     font-size: var(--font-size-medium);
   }
 
-  .text p {
-    font-size: var(--font-size-small);
+  .container-text {
+    padding: 8rem 2rem;
   }
+
 
   .redes-sociais a {
     font-size: var(--font-size-medium);
@@ -190,6 +151,11 @@
     font-size: var(--font-size-large);
   }
 
+  .portfolio .portfolio-item {
+    width: 100%;
+  }
+
+
   .portfolio .portfolio-item h2 {
     font-size: var(--font-size-medium);
   }
@@ -199,4 +165,53 @@
   }
 
   
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .nav-container a {
+    font-size: var(--font-size-medium);
+    margin: 0.5rem;
+    padding: 0.1rem;
+  }
+
+  .logo h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .container-text {
+    padding: 8rem 2rem;
+  }
+
+
+  .redes-sociais a {
+    font-size: var(--font-size-medium);
+  }
+
+  .saber-mais {
+    font-size: var(--font-size-medium);
+  }
+
+  .portfolio h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .portfolio .portfolio-item {
+    width: 100%;
+  }
+
+
+  .portfolio .portfolio-item h2 {
+    font-size: var(--font-size-medium);
+  }
+
+  .portfolio .portfolio-item .image-wrapper p {
+    font-size: var(--font-size-medium);
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio .portfolio-item h2{
+    font-size: 1rem;
+  }
+
 }
