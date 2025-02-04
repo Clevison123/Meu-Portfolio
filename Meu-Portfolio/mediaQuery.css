@@ -15,36 +15,109 @@
 #sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 250px;
+  left: calc(-1 * var(--sidebar-width));
+  width: var(--sidebar-width);
   height: 100vh;
-  background: #1a1a1a;
-  transition: right 0.3s ease-in-out;
+  background: var(--text-color);
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-timing);
   z-index: 1000;
-  padding: 20px;
+  padding: 2rem;
+  color: var(--bg-color);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
 }
 
 #sidebar.active {
-  right: 0;
+  transform: translateX(0); /* Changed to 0 for proper left alignment */
+}
+
+#sidebar ul {
+  margin-top: 3rem;
+  padding: 0;
+  list-style: none;
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  gap: 1.2rem; /* Added spacing between items */
+}
+
+#sidebar li {
+  margin: 0.5rem 0; /* Reduced margin */
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  width: 100%; /* Added */
+}
+
+#sidebar.active li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#sidebar a {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-size: var(--font-size-medium);
+  padding: 1rem 1.5rem; /* Increased padding */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%; /* Added */
+  box-sizing: border-box; /* Added */
+}
+
+#sidebar a:hover,
+#sidebar a.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--main-color);
+  /* padding-left: 2rem; */
 }
 
 .hamburger {
   display: none;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: white;
+  color: var(--main-color);
   font-size: 1.5rem;
 }
 
+/* Close button positioning */
 #closeButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5rem;
+  right: 1.5rem;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.5rem;
+  color: var(--bg-color);
+  font-size: var(--font-size-large);
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 0.5rem;
 }
+
+/* Adjust sidebar padding and list positioning */
+#sidebar {
+  padding: 6rem 2rem 2rem 2rem; /* Top padding reduced */
+}
+
+#sidebar ul {
+  margin-top: 2rem; /* Reduced from 3rem */
+}
+
+
+/* Staggered animation for list items */
+#sidebar li:nth-child(1) { transition-delay: 0.1s; }
+#sidebar li:nth-child(2) { transition-delay: 0.2s; }
+#sidebar li:nth-child(3) { transition-delay: 0.3s; }
+#sidebar li:nth-child(4) { transition-delay: 0.4s; }
+
+
+
+
 
 
 /* Media Queries */
@@ -56,6 +129,10 @@
   .hamburger {
     display: block;
     margin-right: -3rem;
+  }
+
+  #sidebar {
+    display: block;
   }
 
   .logo {

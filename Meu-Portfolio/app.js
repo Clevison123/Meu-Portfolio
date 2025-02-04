@@ -1,39 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
+  // Select elements
+  const hamburger = document.getElementById("hamburger");
   const sidebar = document.getElementById("sidebar");
   const closeButton = document.getElementById("closeButton");
+  const body = document.body;
 
+  // Error handling
   if (!hamburger || !sidebar || !closeButton) {
-    console.error("Error: Elements missing. Check your HTML.");
+    console.error("Error: Essential elements missing from DOM");
     return;
   }
 
-  // Open Sidebar
-  hamburger.addEventListener("click", () => {
-    sidebar.classList.add("active");
-  });
+  // Sidebar controls
+  const toggleSidebar = (isOpen) => {
+    sidebar.classList.toggle("active", isOpen);
+    body.classList.toggle("sidebar-active", isOpen);
+  };
 
-  // Close Sidebar When Clicking the Close Button
-  closeButton.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-  });
+  // Event listeners
+  hamburger.addEventListener("click", () => toggleSidebar(true));
+  closeButton.addEventListener("click", () => toggleSidebar(false));
 
-  // Close Sidebar When Clicking Outside
+  // Close when clicking outside
   document.addEventListener("click", (event) => {
-    if (
-      !sidebar.contains(event.target) &&
-      !hamburger.contains(event.target) &&
-      sidebar.classList.contains("active")
-    ) {
-      sidebar.classList.remove("active");
+    if (sidebar.classList.contains("active") &&
+        !sidebar.contains(event.target) &&
+        !hamburger.contains(event.target)) {
+      toggleSidebar(false);
     }
   });
 
-  // Close Sidebar When Clicking Any Link Inside It
-  document.querySelectorAll("#sidebar a").forEach((link) => {
-    link.addEventListener("click", () => {
-      sidebar.classList.remove("active");
-    });
+  // Close when clicking links
+  document.querySelectorAll("#sidebar a").forEach(link => {
+    link.addEventListener("click", () => toggleSidebar(false));
+  });
+
+  // Optional: Close on ESC key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && sidebar.classList.contains("active")) {
+      toggleSidebar(false);
+    }
   });
 });
 //////////////////////////////////////////////////////////
