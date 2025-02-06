@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+:root {
+  --main-color: #2ecc71;
+  --second-color: #fff;
+  --bg-color: #000;
+  --h2-font: 32px;
+}
+
+@media (max-width: 500px) {
+
+  .voltar{
+    margin: 1rem;
+  }
+
+  .voltar a{
+    width: 90px;
+    font-size: 14px;
+  }
+
+  .nav {
+    margin: 0;
+  }
+  
+  .nav a{
+    font-size: 14px;
+  }
+  
+  #resume h1,
+  #curriculo h1{
+  font-size: 22px;
+  }
+
+  #resume h2,
+  #curriculo h2{
+  font-size: 17px;
+  }
+
+  #resume p,
+  #curriculo p{
+  font-size: 14px;
+  }
+
+  #resume i,
+  #curriculo i{
+  font-size: 17px;
+  }
+}

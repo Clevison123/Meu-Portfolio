@@ -40,11 +40,11 @@
   list-style: none;
   display: flex; /* Added */
   flex-direction: column; /* Added */
-  gap: 1.2rem; /* Added spacing between items */
+  gap: 0; /* Added spacing between items */
 }
 
 #sidebar li {
-  margin: 0.5rem 0; /* Reduced margin */
+  margin:  0; /* Reduced margin */
   opacity: 0;
   transform: translateX(-20px);
   transition: all 0.4s ease;
@@ -68,8 +68,7 @@
   box-sizing: border-box; /* Added */
 }
 
-#sidebar a:hover,
-#sidebar a.active {
+#sidebar a:hover{
   background: rgba(255, 255, 255, 0.1);
   color: var(--main-color);
   /* padding-left: 2rem; */
@@ -87,7 +86,7 @@
 /* Close button positioning */
 #closeButton {
   position: absolute;
-  top: 5rem;
+  top: 4.5rem;
   right: 1.5rem;
   background: none;
   border: none;
@@ -97,6 +96,11 @@
   transition: all 0.3s ease;
   z-index: 1001;
   padding: 0.5rem;
+}
+
+
+#sidebar #closeButton:hover{
+  color: var(--main-color);
 }
 
 /* Adjust sidebar padding and list positioning */
@@ -156,7 +160,7 @@
   }
 
   .button-wrapper {
-    margin-top: 1rem;
+    margin-top: -3rem;
   }
 
   .custom-button {
