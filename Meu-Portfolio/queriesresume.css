@@ -45,4 +45,16 @@
   #curriculo i{
   font-size: 17px;
   }
+
+  #curriculo  .work-experience h2 {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .text-ind{
+    text-align: start ;
+    text-indent: 2rem;
+  }
+
+  
 }
