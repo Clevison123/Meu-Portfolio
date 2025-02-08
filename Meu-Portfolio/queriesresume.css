@@ -51,10 +51,102 @@
     font-size: 17px;
   }
 
+  .assi{
+    text-align: start;
+  }
+
   .text-ind{
     text-align: start ;
     text-indent: 2rem;
   }
+ 
+}
 
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .voltar{
+    margin: 1rem;
+  }
+
+  .voltar a{
+    width: 90px;
+    font-size: 16px;
+  }
+
+  .nav {
+    margin: 0;
+  }
   
+  .nav a{
+    font-size: 16px;
+  }
+  
+  #resume h1,
+  #curriculo h1{
+  font-size: 24px;
+  }
+
+  #resume h2,
+  #curriculo h2{
+  font-size: 19px;
+  }
+
+  #resume p,
+  #curriculo p{
+  font-size: 16px;
+  }
+
+  #resume i,
+  #curriculo i{
+  font-size: 19px;
+  }
+
+  #resume .work-experience h2,
+  #curriculo  .work-experience h2 {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .assi{
+    text-align: start;
+  }
+
+  .text-ind{
+    text-align: start ;
+    text-indent: 2rem;
+  } 
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .voltar{
+    margin: .8rem;
+    margin-left: 3rem;
+  }
+
+  .voltar a{
+    width: 90px;
+    font-size: 18px;
+  }
+
+  .nav {
+    margin-right: 2rem;
+  }
+  
+  .nav a{
+    font-size: 18px;
+  }
+  
+  #resume h1,
+  #curriculo h1{
+  font-size: 26px;
+  }
+
+  #resume h2,
+  #curriculo h2{
+  font-size: 20px;
+  }
+
+  .text-ind{
+    text-align: start ;
+    text-indent: 2rem;
+  } 
 }

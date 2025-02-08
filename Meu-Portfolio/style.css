@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.181);
     z-index: 999;
 }
 
@@ -128,6 +128,10 @@ header {
     color: #555;
   }
 
+
+
+
+  /*
   #wrapper1,
   #wrapper2 {
     position: relative;
@@ -213,7 +217,7 @@ header {
   #wrapper2.active .item-c:nth-child(6) {
     transform: translate(30px, 10px);
   }
-  
+  */
   
   .resume-content {
     display: flex;

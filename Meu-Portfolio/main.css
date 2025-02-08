@@ -110,6 +110,7 @@ header.scrolled {
   font-size: 20px;
   font-weight: 300;
   margin-top: 20px;
+  margin-bottom: 2rem;
   text-indent: 2rem;
 
   max-width: 500px; 
@@ -119,6 +120,7 @@ header.scrolled {
   
 }
 
+/*
 .redes-sociais a {
   color: #2ecc71;
   font-size: 25px;
@@ -148,6 +150,7 @@ header.scrolled {
   margin-bottom: 30px;
 }
 
+*/
 
 .saber-mais {
   color: #2ecc71;
