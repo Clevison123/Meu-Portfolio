@@ -255,16 +255,22 @@ header.scrolled {
   color: #fff;
   transition: 0.5s;
 }
+/*React buttons delete these when you add yours react projects*/
+.reactBtn{
+  padding: 0;
+  margin-top: -22rem;
+}
 
 .button-wrapper {
   padding-top: 5rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
 }
 
 .custom-button {
   text-align: center;
-  padding: 10px 10px;
+  padding: 5px 10px;
   margin: .5rem;
   margin-bottom: 30px;
   font-size: 18px;

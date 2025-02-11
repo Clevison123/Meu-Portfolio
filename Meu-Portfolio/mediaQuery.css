@@ -169,12 +169,12 @@
   }
 
   .button-wrapper {
-    margin-top: -3rem;
+    margin-top: -4rem;
   }
 
   .custom-button {
     font-size: 24px;
-    margin: 1rem 1rem;
+    margin: .5rem;
   }
 }
 
